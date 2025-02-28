@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: 15, 23, 42, 1;
+  --white: 255, 255, 255, 1;
+  --background: 15, 23, 42, 1;
+  --foreground: 255, 255, 255, 1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 234, 90%, 4%;
-    --foreground: #ededed;
+    --primary: 15, 23, 42, 1;
+    --background: 15, 23, 42, 1;
+    --foreground: 255, 255, 255, 1;
   }
 }
 
@@ -22,7 +25,33 @@
 }
 
 body {
-  color: var(--foreground);
-  background: hsla(var(--background));
+  color: rgba(var(--white));
+  background: rgba(var(--background));
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.itim-regular {
+  font-family: 'Itim', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono {
+  font-family: 'Roboto Mono', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.background-circle {
+  background-color: transparent;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 1%,
+    rgb(6 19 45) 40%
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  mask: linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
 }

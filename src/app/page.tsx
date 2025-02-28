@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div>
-      <p>asd</p>
-    </div>
-  );
+import HomeView from '@/views/home';
+
+export default function HomePage() {
+  return <HomeView />;
 }

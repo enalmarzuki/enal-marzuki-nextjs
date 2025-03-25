@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html className='scroll-smooth transition-all duration-300' lang='en'>
       <body>{children}</body>
     </html>
   );

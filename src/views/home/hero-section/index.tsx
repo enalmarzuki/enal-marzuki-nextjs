@@ -34,7 +34,7 @@ const HeroSection = () => {
             tested solutions that enhance the user experience.
           </p>
 
-          <ButtonCTA title='Download DV' />
+          <ButtonCTA title='Download CV' />
         </motion.div>
       </div>
     </div>

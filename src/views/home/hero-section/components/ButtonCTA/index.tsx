@@ -9,7 +9,7 @@ interface ButtonCTAProps {
 const ButtonCTA: React.FC<ButtonCTAProps> = (props) => {
   return (
     <a
-      href='/public/cv-marzuki-compressed.pdf'
+      href='/cv-marzuki-compressed.pdf'
       download='cv-marzuki-compressed.pdf'
       target='_blank'
       rel='noopener noreferrer'

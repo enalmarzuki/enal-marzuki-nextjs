@@ -2,6 +2,7 @@ import IcDownload from '@/assets/icons/ic-download';
 import BackgroundBlob from '@/components/BackgroundBlob';
 import { motion } from 'motion/react';
 import React from 'react';
+import ButtonCTA from './components/ButtonCTA';
 
 const HeroSection = () => {
   return (
@@ -14,18 +15,18 @@ const HeroSection = () => {
           initial={{ opacity: 1, position: 'relative', top: 20 }}
           animate={{ opacity: [0, 1], top: 0 }}
           transition={{ duration: 1 }}
-          className='flex h-[calc(100%_-_50px)] flex-col items-center justify-center'
+          className='flex h-[calc(100%_-_50px)] flex-col justify-center md:items-center'
         >
-          <p className='roboto-mono mb-1 text-center text-xs md:mb-2.5 md:text-sm'>
+          <p className='roboto-mono mb-1 text-left text-xs md:mb-2.5 md:text-center md:text-sm'>
             Hi 👋, my name is
           </p>
-          <p className='text-center text-3xl font-semibold md:mb-2.5 md:text-5xl'>
+          <p className='text-3xl font-semibold md:mb-2.5 md:text-center md:text-5xl'>
             Marzuki R.
           </p>
-          <p className='mb-2.5 text-center text-2xl font-semibold md:mb-4 md:text-5xl'>
+          <p className='mb-2.5 text-3xl font-semibold md:mb-4 md:text-center md:text-5xl'>
             I’m a Frontend Developer
           </p>
-          <p className='mb-5 max-w-[753px] text-center text-xs font-light leading-5 text-gray-300 md:text-sm md:leading-6'>
+          <p className='mb-5 max-w-[753px] text-base font-light leading-6 text-gray-300 md:text-center md:text-base'>
             I have been working as a Frontend Developer for more than 3 years, I
             excel in creating dynamic and visually appealing user interfaces
             using ReactJS. My work emphasizes clean, scalable code and optimized
@@ -33,11 +34,7 @@ const HeroSection = () => {
             tested solutions that enhance the user experience.
           </p>
 
-          <div className='group relative flex cursor-pointer items-center gap-3 overflow-hidden rounded-xl border border-[#6c6c6c] px-4 py-3 backdrop-blur-sm'>
-            <div className='absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white/5 opacity-0 backdrop-blur-sm transition-all duration-300 ease-in-out group-hover:h-full group-hover:w-full group-hover:opacity-100'></div>
-            <p className='text-xs md:text-base'>Download CV</p>
-            <IcDownload className='size-4 md:size-5' />
-          </div>
+          <ButtonCTA title='Download DV' />
         </motion.div>
       </div>
     </div>

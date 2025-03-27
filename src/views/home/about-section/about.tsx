@@ -16,24 +16,24 @@ const AboutSection = () => {
       >
         <div className='flex flex-col gap-2.5'>
           <p className='text-2xl font-semibold'>About Me</p>
-          <p className='text-sm leading-6'>
+          <p className='leading-6 text-gray-300'>
             Hello my name is Marzuki, I am from Indonesia and I have been
             working as a Frontend Developer for more than 3 years and as someone
             who works in technology, I like to learn something new to support my
             work.
           </p>
-          <p className='text-sm leading-6'>
+          <p className='leading-6 text-gray-300'>
             I have used to React as daily programming language for building an
             application. And until now i have been involved in several projects
             like Project Management Platform, Automotive and etc.
           </p>
-          <p className='text-sm leading-6'>
+          <p className='leading-6 text-gray-300'>
             Some of the technologies that I am currently proficient in include:
           </p>
         </div>
         <div className='mt-3 grid grid-flow-col grid-rows-3 gap-1'>
           {SKILLS.map((skill) => (
-            <p key={skill} className='text-sm'>
+            <p key={skill} className='text-gray-300'>
               &bull; {skill}
             </p>
           ))}

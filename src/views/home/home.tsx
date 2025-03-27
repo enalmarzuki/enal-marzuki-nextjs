@@ -1,11 +1,12 @@
 'use client';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import Navbar from '@/components/Navbar';
 import AnimatedImage from '@/components/AnimatedImage';
 import HeroSection from './hero-section';
-import { SKILLS } from '@/constant';
+import { COMPANY, EXPERIENCES, SKILLS } from '@/constant';
 import AboutSection from './about-section/about';
+import ExperienceSection from './experience-section';
 
 const HomeView = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -26,6 +27,7 @@ const HomeView = () => {
         <div className='container mx-auto'>
           <HeroSection />
           <AboutSection />
+          <ExperienceSection />
         </div>
       )}
     </>

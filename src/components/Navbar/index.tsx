@@ -8,6 +8,7 @@ import NavbarIcon from './NavbarIcon';
 import NavbarTitle from './NavbarTitle';
 import Image from 'next/image';
 import Link from 'next/link';
+import useIsInitialRender from '@/hooks/useIsInitialRender';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -15,6 +16,10 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
+  const isInitialRender = useIsInitialRender();
+
+  console.log('🚀 isInitialRender >>', isInitialRender);
+
   return (
     <div className='md:hidden'>
       <motion.div
@@ -24,31 +29,33 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
         })}
         initial={{ width: '2.5rem', height: '2.5rem' }}
         animate={
-          isOpen
-            ? {
-                margin: [16, 0, 0, 0],
-                borderRadius: ['50%', 0, 0, 0],
-                height: ['3rem', '3rem', '100%', '100%'],
-                width: ['3rem', '3rem', '3rem', '15rem'],
-                backgroundColor: [
-                  'rgb(255 255 255)',
-                  'rgb(0 0 0 / 0.2)',
-                  'rgb(0 0 0 / 0.4)',
-                  'rgb(0 0 0 / 0.5)',
-                ],
-              }
-            : {
-                margin: [16, 0, 0, 0].reverse(),
-                borderRadius: ['50%', 0, 0, 0].reverse(),
-                height: ['2.5rem', '2.5rem', '100%', '100%'].reverse(),
-                width: ['2.5rem', '2.5rem', '2.5rem', '15rem'].reverse(),
-                backgroundColor: [
-                  'rgb(255 255 255)',
-                  'rgb(0 0 0 / 0.9)',
-                  'rgb(0 0 0 / 0.7)',
-                  'rgb(0 0 0 / 0.5)',
-                ].reverse(),
-              }
+          isInitialRender
+            ? undefined
+            : isOpen
+              ? {
+                  margin: [16, 0, 0, 0],
+                  borderRadius: ['50%', 0, 0, 0],
+                  height: ['3rem', '3rem', '100%', '100%'],
+                  width: ['3rem', '3rem', '3rem', '15rem'],
+                  backgroundColor: [
+                    'rgb(255 255 255)',
+                    'rgb(0 0 0 / 0.2)',
+                    'rgb(0 0 0 / 0.4)',
+                    'rgb(0 0 0 / 0.5)',
+                  ],
+                }
+              : {
+                  margin: [16, 0, 0, 0].reverse(),
+                  borderRadius: ['50%', 0, 0, 0].reverse(),
+                  height: ['2.5rem', '2.5rem', '100%', '100%'].reverse(),
+                  width: ['2.5rem', '2.5rem', '2.5rem', '15rem'].reverse(),
+                  backgroundColor: [
+                    'rgb(255 255 255)',
+                    'rgb(0 0 0 / 0.9)',
+                    'rgb(0 0 0 / 0.7)',
+                    'rgb(0 0 0 / 0.5)',
+                  ].reverse(),
+                }
         }
         transition={{
           duration: 1,
@@ -68,10 +75,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
               }}
               className='relative flex h-fit w-full items-center justify-between'
             >
-              <div className={cx('flex h-fit items-center gap-1.5')}>
-                <NavbarIcon />
-                <NavbarTitle />
-              </div>
+              <Link href='#home' passHref>
+                <div className='flex h-fit items-center gap-1.5'>
+                  <NavbarIcon />
+                  <NavbarTitle />
+                </div>
+              </Link>
               <IcClose
                 className='size-6 cursor-pointer stroke-white'
                 onClick={onToggle}
@@ -102,21 +111,22 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
               }}
             >
               {NAVBAR_MENU.map((item) => (
-                <motion.a
-                  key={item.key}
-                  className='cursor-pointer text-sm font-semibold'
-                  variants={{
-                    hidden: { opacity: 0, y: 10 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    ease: 'easeInOut',
-                  }}
-                  href={`#${item.key}`}
-                >
-                  {item.label}
-                </motion.a>
+                <Link passHref href={`#${item.key}`} key={item.key}>
+                  <motion.div
+                    key={item.key}
+                    className='cursor-pointer text-sm font-semibold'
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    {item.label}
+                  </motion.div>
+                </Link>
               ))}
             </motion.div>
           </div>
@@ -152,10 +162,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
                     ease: 'easeInOut',
                   }}
                 >
-                  <img
+                  <Image
                     src={social.src}
                     alt={social.description}
+                    width={32}
+                    height={32}
                     className='cursor-pointer'
+                    loading='lazy'
                   />
                 </motion.a>
               ))}
@@ -174,7 +187,7 @@ const Navbar = () => {
     <nav>
       <MobileMenu isOpen={isOpen} onToggle={onToggle} />
 
-      <div className='background-circle fixed z-10 hidden w-full p-4 md:flex'>
+      <div className='background-circle fixed z-10 hidden w-full px-20 py-4 md:flex'>
         <motion.div
           animate={{
             top: [10, 0],

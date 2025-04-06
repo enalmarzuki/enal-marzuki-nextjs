@@ -6,6 +6,8 @@ import cx from 'classnames';
 import { motion } from 'motion/react';
 import NavbarIcon from './NavbarIcon';
 import NavbarTitle from './NavbarTitle';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -180,28 +182,30 @@ const Navbar = () => {
           }}
           className='relative flex h-fit w-full items-center justify-between'
         >
-          <div className={cx('flex h-fit items-center gap-1.5')}>
-            <NavbarIcon />
-            <NavbarTitle />
-          </div>
+          <Link href='#home' passHref>
+            <div className='flex h-fit cursor-pointer items-center gap-1.5'>
+              <NavbarIcon />
+              <NavbarTitle />
+            </div>
+          </Link>
 
           <div className='flex gap-8'>
             {NAVBAR_MENU.map((item) => (
-              <motion.a
-                key={item.key}
-                className='cursor-pointer text-sm font-semibold'
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: 'easeInOut',
-                }}
-                href={`#${item.key}`}
-              >
-                {item.label}
-              </motion.a>
+              <Link passHref href={`#${item.key}`} key={item.key}>
+                <motion.div
+                  className='cursor-pointer text-sm font-semibold'
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: 'easeInOut',
+                  }}
+                >
+                  {item.label}
+                </motion.div>
+              </Link>
             ))}
           </div>
           <div className='flex gap-4'>
@@ -221,10 +225,13 @@ const Navbar = () => {
                   ease: 'easeInOut',
                 }}
               >
-                <img
+                <Image
                   src={social.src}
                   alt={social.description}
+                  width={32}
+                  height={32}
                   className='cursor-pointer'
+                  loading='lazy'
                 />
               </motion.a>
             ))}

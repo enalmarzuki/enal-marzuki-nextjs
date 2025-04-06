@@ -13,18 +13,16 @@ const ExperienceSection = () => {
   return (
     <motion.div
       id='experience'
-      className='w-12/12 md:w-19/12 mx-auto grid grid-cols-12 lg:w-10/12 xl:w-[1000px]'
+      className='mx-auto grid grid-cols-12 py-40 lg:w-10/12 xl:w-[1200px] 2xl:py-16'
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, margin: '-50px' }}
     >
-      <div className='hf col-span-12 flex items-center justify-center font-sans text-2xl font-semibold text-gray-200'>
-        <p className='text-center text-2xl font-semibold md:mb-4'>
-          Experiences
-        </p>
+      <div className='col-span-12 flex h-fit items-center justify-center font-sans text-2xl font-semibold text-gray-200'>
+        <p className='text-center text-2xl font-semibold'>Experiences</p>
       </div>
-      <div className='col-span-12 mt-4 h-[500px]'>
+      <div className='col-span-12 mt-4 min-h-[500px]'>
         <div className='mx-auto p-4'>
           <div className='w-12/12 grid grid-cols-12 font-mono'>
             <Tabs
@@ -46,31 +44,65 @@ const ExperienceSection = () => {
                     <p className='roboto-mono text-sm'>Jan 2023 - Present</p>
                   </div>
                   <div className='mt-4'>
-                    <ul>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Assist Frontend Leaders to Manage Tasks
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Collaborated in breaking down new feature requests into
+                        detailed tickets, ensuring clear documentation of both
+                        functional and technical requirements.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Managed and tracked team tasks to support an organized
+                        and efficient development workflow.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Conducted code reviews for fellow Frontend Developers to
+                        maintain coding standards and architectural consistency.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Built and enhanced features using
+                        <span className='font-medium text-white'>
+                          &nbsp;ReactJS&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Review Frontend Developer's code so that it is
-                          in accordance with the standards in the project
+                        , with
+                        <span className='font-medium text-white'>
+                          &nbsp;MobX&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Created several features using ReactJS, MobX as
-                          state management, and GraphQL as a service.
+                        for state management and
+                        <span className='font-medium text-white'>
+                          &nbsp;GraphQL&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Implemented and customized Ant Design
-                          components as the UI we used.
+                        as the service layer.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Customized
+                        <span className='font-medium text-white'>
+                          &nbsp;Ant Design&nbsp;
                         </span>
-                      </li>
-                    </ul>
+                        components to meet specific design systems and
+                        functional needs of the application.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Developed several reusable components to improve
+                        development efficiency and maintain consistency across
+                        the application.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -81,7 +113,7 @@ const ExperienceSection = () => {
                 <div>
                   <div className='flex flex-col'>
                     <h4 className='mb-2 flex text-lg font-bold'>
-                      Frontend Developer
+                      Frontend Developer - VirtualSpace Platform
                     </h4>
                     <p className='roboto-mono text-base font-semibold'>
                       Virtual Spirit Technology Sdn. Bhd.
@@ -89,19 +121,55 @@ const ExperienceSection = () => {
                     <p className='roboto-mono text-sm'>Nov 2022 - Sep 2024</p>
                   </div>
                   <div className='mt-4'>
-                    <ul>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Create several features using NextJS, Zustand
-                          as state management, and TailwindCSS.
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Developed and maintained core task management features
+                        on the
+                        <span className='font-medium text-white'>
+                          &nbsp;VirtualSpace Platform&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Create some reusable components
+                        , ensuring scalability and reliability across different
+                        use case and efficient workflow.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Optimized the performance of the task list component by
+                        implementing efficient rendering strategies and
+                        improving data handling, resulting in a smoother user
+                        experience.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Integrated real-time updates for the task management
+                        system using
+                        <span className='font-medium text-white'>
+                          &nbsp;AnyCable&nbsp;
                         </span>
-                      </li>
-                    </ul>
+                        , enabling seamless live collaboration between users.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Built and maintained various components in the form
+                        builder and storage modules, contributing to the
+                        platform’s flexibility in creating dynamic forms and
+                        managing user-generated content effectively.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Contributed to the chat feature by handling UI
+                        adjustments and fixing minor bugs to improve user
+                        experience and interface consistency.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -120,15 +188,22 @@ const ExperienceSection = () => {
                     <p className='roboto-mono text-sm'>Jan 2023 - Jun 2023</p>
                   </div>
                   <div className='mt-4'>
-                    <ul>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Contribute to the Web Reader project, create
-                          components and perform API integration using Restful
-                          APIs.
-                        </span>
-                      </li>
-                    </ul>
+                    <p className='mb-2 flex items-start font-sans text-white/70'>
+                      <span className='pr-2'>&bull;</span>Contributed to the
+                      development of a Web Reader application, focusing on
+                      delivering a responsive and intuitive user experience.
+                    </p>
+                    <p className='mb-2 flex items-start font-sans text-white/70'>
+                      <span className='pr-2'>&bull;</span>Developed and
+                      maintained reusable components to ensure consistency,
+                      scalability, and efficiency across the codebase.
+                    </p>
+                    <p className='mb-2 flex items-start font-sans text-white/70'>
+                      <span className='pr-2'>&bull;</span>Integrated frontend
+                      features with RESTful APIs, enabling seamless
+                      communication with backend services and improving overall
+                      app performance.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -147,20 +222,31 @@ const ExperienceSection = () => {
                     <p className='roboto-mono text-sm'>Mar 2021 - Jan 2022</p>
                   </div>
                   <div className='mt-4'>
-                    <ul>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Involved in several projects and collaborated
-                          with the backend team and UI/UX Designers.
-                        </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; I was responsible for creating features on the
-                          admin dashboard.
-                        </span>
-                      </li>
-                    </ul>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Developed and maintained multiple web projects,
+                        including Pondok Vaksin, Praktek Dr. Bob, and others,
+                        focusing on delivering user-friendly and functional
+                        interfaces.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Integrated frontend with backend services using RESTful
+                        APIs, ensuring reliable and efficient data
+                        communication.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Created and maintained reusable components for the
+                        Pondok Vaksin project to streamline development and
+                        maintain UI consistency.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -179,25 +265,34 @@ const ExperienceSection = () => {
                     <p className='roboto-mono text-sm'>Jan 2021 - Mar 2021</p>
                   </div>
                   <div className='mt-4'>
-                    <ul>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Design and Create website hukumdigital.com
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Designed and developed the HukumDigital.com website from
+                        scratch, ensuring a clean and user-friendly interface.
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Converted UI/UX designs into high-quality code using
+                        <span className='font-medium text-white'>
+                          &nbsp;ReactJS&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Convert design to code using ReactJS and
-                          TailwindCss
+                        and
+                        <span className='font-medium text-white'>
+                          &nbsp;TailwindCSS.&nbsp;
                         </span>
-                      </li>
-                      <li>
-                        <span className='mb-2 flex items-start font-sans text-white/70'>
-                          &bull; Integration RestAPI that has been created by
-                          the backend team
-                        </span>
-                      </li>
-                    </ul>
+                      </p>
+                    </div>
+                    <div className='mb-2 flex items-start'>
+                      <span className='pr-2'>&bull;</span>
+                      <p className='font-sans text-white/70'>
+                        Collaborated with the backend team to integrate RESTful
+                        APIs, ensuring seamless data flow and dynamic content
+                        across the platform.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

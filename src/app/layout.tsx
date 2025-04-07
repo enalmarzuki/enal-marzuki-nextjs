@@ -6,14 +6,22 @@ import { inter, itim, robotoMono } from '@/utils/fonts';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: 'EnalMarzuki.',
-  authors: {
-    name: 'Enal Marzuki',
-  },
+  title: 'Enal Marzuki – Frontend Developer',
   description:
-    'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
+    'Personal portfolio of Enal Marzuki, a passionate frontend developer based in Indonesia. Built with Next.js and Tailwind CSS.',
+  authors: [{ name: 'Enal Marzuki' }],
   verification: {
     google: 'xH1pBY9Tdf_Gp2NhxLjRXJB-6jkDkbXLxysHquTjHV8',
+  },
+  robots: 'index, follow',
+  keywords: [
+    'enal marzuki',
+    'frontend developer',
+    'portfolio',
+    'react developer',
+  ],
+  alternates: {
+    canonical: 'https://enalmarzuki.vercel.app',
   },
   icons: {
     icon: '/ic-em.ico',
@@ -21,11 +29,11 @@ export const metadata: Metadata = {
     apple: '/ic-em.ico',
   },
   openGraph: {
-    title: 'EnalMarzuki.',
+    title: 'Enal Marzuki – Frontend Developer',
     description:
-      'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
+      'Personal portfolio of Enal Marzuki, built with Next.js and Tailwind CSS.',
     url: 'https://enalmarzuki.vercel.app',
-    siteName: 'EnalMarzuki',
+    siteName: 'Enal Marzuki',
     images: [
       {
         url: 'https://enalmarzuki.vercel.app/og-image.png',

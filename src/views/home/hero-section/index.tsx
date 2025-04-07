@@ -17,7 +17,7 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className='flex h-[calc(100%_-_50px)] flex-col justify-center md:items-center'
         >
-          <p className='roboto-mono mb-1 text-left text-xs md:mb-2.5 md:text-center md:text-sm'>
+          <p className='mb-1 text-left font-roboto text-xs md:mb-2.5 md:text-center md:text-sm'>
             Hi 👋, my name is
           </p>
           <p className='text-3xl font-semibold md:mb-2.5 md:text-center md:text-5xl'>

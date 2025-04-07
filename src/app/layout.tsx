@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
+import { Inter, Itim, Roboto_Mono } from 'next/font/google';
+import cx from 'classnames';
 
 export const metadata: Metadata = {
   title: 'EnalMarzuki.',
@@ -13,13 +14,40 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = Inter({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const robotoMono = Roboto_Mono({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+});
+
+const itim = Itim({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-itim',
+  weight: '400',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html className='scroll-smooth transition-all duration-300' lang='en'>
+    <html
+      className={cx(
+        'scroll-smooth transition-all duration-300',
+        inter.variable,
+        robotoMono.variable,
+        itim.variable,
+      )}
+      lang='en'
+    >
       <body>{children}</body>
     </html>
   );

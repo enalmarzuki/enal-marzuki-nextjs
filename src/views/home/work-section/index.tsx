@@ -49,7 +49,7 @@ const WorkSection = () => {
 
             <p className='leading-6 text-gray-300'>{work.description}</p>
             <div>
-              <p className='roboto-mono mb-2 mt-4 text-base leading-6 text-gray-300'>
+              <p className='mb-2 mt-4 font-roboto text-base leading-6 text-gray-300'>
                 Tech Stack :
               </p>
               <div className='flex flex-wrap items-center gap-2'>

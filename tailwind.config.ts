@@ -14,6 +14,11 @@ const config: Config = {
           DEFAULT: 'rgba(var(--primary))',
         },
       },
+      fontFamily: {
+        inter: ['var(--font-inter)', 'serif'],
+        itim: ['var(--font-itim)', 'serif'],
+        roboto: ['var(--font-roboto-mono)', 'serif'],
+      },
       keyframes: {
         shimmer: {
           '0%': { backgroundPosition: '0% 50%' },

@@ -51,7 +51,7 @@ const HomeView = () => {
             </div>
 
             <div className='flex justify-center pb-8'>
-              <p className='roboto-mono text-xs'>©2025 - Enalmarzuki.com</p>
+              <p className='font-roboto text-xs'>©2025 - Enalmarzuki.com</p>
             </div>
           </motion.div>
         )}

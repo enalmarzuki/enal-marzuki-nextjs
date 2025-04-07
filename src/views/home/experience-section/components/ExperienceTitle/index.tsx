@@ -14,8 +14,8 @@ const ExperienceTitle: React.FC<ExperienceTitleProps> = ({
   return (
     <div className='flex flex-col'>
       <h4 className='mb-2 flex text-lg font-bold'>{role}</h4>
-      <p className='roboto-mono text-base font-semibold'>{company}</p>
-      <p className='roboto-mono text-sm'>{date}</p>
+      <p className='font-roboto text-base font-semibold'>{company}</p>
+      <p className='font-roboto text-sm'>{date}</p>
     </div>
   );
 };

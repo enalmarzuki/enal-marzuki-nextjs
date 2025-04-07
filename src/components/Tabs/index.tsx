@@ -18,7 +18,7 @@ const Tabs: React.FC<TabsProps> = (props): JSX.Element => {
             onClick={() => props.onChange(menu)}
             key={index}
             className={cx(
-              'roboto-mono w-fit cursor-pointer border-b-2 border-l-0 px-3 py-4 text-sm transition-all duration-300 ease-in-out sm:border-b-0 sm:border-l-2 sm:py-2',
+              'w-fit cursor-pointer border-b-2 border-l-0 px-3 py-4 font-roboto text-sm transition-all duration-300 ease-in-out sm:border-b-0 sm:border-l-2 sm:py-2',
               {
                 'border-cyan-300 font-semibold text-cyan-300': isActive,
                 'border-white/60 text-white/60': !isActive,

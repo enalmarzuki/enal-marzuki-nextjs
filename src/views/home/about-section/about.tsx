@@ -1,11 +1,12 @@
+import SectionTitle from '@/components/SectionTitle';
 import { SKILLS } from '@/constant';
-import * as motion from 'motion/react-client';
+import { motion } from 'motion/react';
 
 const AboutSection = () => {
   return (
     <div
       id='about'
-      className='relative grid grid-cols-12 items-center justify-center gap-4 px-4 py-40 2xl:py-16'
+      className='relative mb-80 grid grid-cols-12 items-center justify-center gap-4 px-4 md:px-6 lg:px-10'
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -15,7 +16,7 @@ const AboutSection = () => {
         className='col-span-12 md:col-span-6 lg:md:col-span-7'
       >
         <div className='flex flex-col gap-2.5'>
-          <p className='text-2xl font-semibold'>About Me</p>
+          <SectionTitle>About Me</SectionTitle>
           <p className='leading-6 text-gray-300'>
             Hello my name is Marzuki, I am from Indonesia and I have been
             working as a Frontend Developer for more than 3 years and as someone

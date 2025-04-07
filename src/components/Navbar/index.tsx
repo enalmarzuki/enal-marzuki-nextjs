@@ -1,3 +1,4 @@
+'use client';
 import IcClose from '@/assets/icons/ic-close';
 import IcHamburger from '@/assets/icons/ic-hamburger';
 import { NAVBAR_MENU, SOCIAL_MENU } from '@/constant';
@@ -18,12 +19,10 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {
   const isInitialRender = useIsInitialRender();
 
-  console.log('🚀 isInitialRender >>', isInitialRender);
-
   return (
     <div className='md:hidden'>
       <motion.div
-        className={cx('fixed top-0 z-10 m-4 flex rounded-full bg-white p-3', {
+        className={cx('fixed top-0 z-30 m-4 flex rounded-full bg-white p-3', {
           'flex-col px-4 py-5 backdrop-blur-sm': isOpen,
           'cursor-pointer items-center justify-center': !isOpen,
         })}
@@ -187,7 +186,7 @@ const Navbar = () => {
     <nav>
       <MobileMenu isOpen={isOpen} onToggle={onToggle} />
 
-      <div className='background-circle fixed z-10 hidden w-full px-20 py-4 md:flex'>
+      <div className='background-circle fixed z-10 hidden w-full py-4 md:flex md:px-4 lg:px-10'>
         <motion.div
           animate={{
             top: [10, 0],

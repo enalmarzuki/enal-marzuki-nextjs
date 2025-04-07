@@ -2,36 +2,45 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Inter, Itim, Roboto_Mono } from 'next/font/google';
 import cx from 'classnames';
+import { inter, itim, robotoMono } from '@/utils/fonts';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'EnalMarzuki.',
+  authors: {
+    name: 'Enal Marzuki',
+  },
   description:
-    'I am a Frontend Developer, i have 3 years experience in this field. As a Frontend Developer i like to learn something new for supporting my work. I have used to React as daily programming language for building an application. And until now i have been involved in several projects like Project Management Platform, Automotive and etc.',
+    'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
   icons: {
     icon: '/ic-em.ico',
-    shortcut: '/ic-em.ico', // Shortcut icon for quick access
-    apple: '/ic-em.ico', // Apple devices icon
+    shortcut: '/ic-em.ico',
+    apple: '/ic-em.ico',
+  },
+  openGraph: {
+    title: 'EnalMarzuki.',
+    description:
+      'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
+    url: 'https://enalmarzuki.vercel.app',
+    siteName: 'EnalMarzuki',
+    images: [
+      {
+        url: 'https://enalmarzuki.vercel.app/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Enal Marzuki Portfolio',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EnalMarzuki.',
+    description:
+      'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
+    images: ['https://enalmarzuki.vercel.app/og-image.png'],
   },
 };
-
-const inter = Inter({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
-
-const robotoMono = Roboto_Mono({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-roboto-mono',
-});
-
-const itim = Itim({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-itim',
-  weight: '400',
-});
 
 export default function RootLayout({
   children,
@@ -41,13 +50,31 @@ export default function RootLayout({
   return (
     <html
       className={cx(
-        'scroll-smooth transition-all duration-300',
+        'scroll-smooth font-inter transition-all duration-300',
         inter.variable,
         robotoMono.variable,
         itim.variable,
       )}
       lang='en'
     >
+      <Head>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Enal Marzuki',
+              url: 'https://enalmarzuki.vercel.app',
+              sameAs: [
+                'https://github.com/enalmarzuki',
+                'https://www.linkedin.com/in/marzuki-r/',
+              ],
+              jobTitle: 'Frontend Developer',
+            }),
+          }}
+        />
+      </Head>
       <body>{children}</body>
     </html>
   );

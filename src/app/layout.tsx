@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   },
   description:
     'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
+  verification: {
+    google: 'xH1pBY9Tdf_Gp2NhxLjRXJB-6jkDkbXLxysHquTjHV8',
+  },
   icons: {
     icon: '/ic-em.ico',
     shortcut: '/ic-em.ico',
@@ -58,10 +61,6 @@ export default function RootLayout({
       lang='en'
     >
       <Head>
-        <meta
-          name='google-site-verification'
-          content='xH1pBY9Tdf_Gp2NhxLjRXJB-6jkDkbXLxysHquTjHV8'
-        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{

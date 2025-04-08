@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'Personal portfolio of Enal Marzuki, a passionate frontend developer based in Indonesia. Built with Next.js and Tailwind CSS.',
   authors: [{ name: 'Enal Marzuki' }],
   verification: {
-    google: 'xH1pBY9Tdf_Gp2NhxLjRXJB-6jkDkbXLxysHquTjHV8',
+    google: 'xtUmJRx8Eqp6mC5TA6E_GbqTP6xy7fSmTqyefgvks_g',
   },
   robots: 'index, follow',
   keywords: [

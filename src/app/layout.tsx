@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'react developer',
   ],
   alternates: {
-    canonical: 'https://enalmarzuki.vercel.app',
+    canonical: 'https://enalmarzuki.com',
   },
   icons: {
     icon: '/ic-em.ico',
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     title: 'Enal Marzuki – Frontend Developer',
     description:
       'Personal portfolio of Enal Marzuki, built with Next.js and Tailwind CSS.',
-    url: 'https://enalmarzuki.vercel.app',
+    url: 'https://enalmarzuki.com',
     siteName: 'Enal Marzuki',
     images: [
       {
-        url: 'https://enalmarzuki.vercel.app/og-image.png',
+        url: 'https://enalmarzuki.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Enal Marzuki Portfolio',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'EnalMarzuki.',
     description:
       'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
-    images: ['https://enalmarzuki.vercel.app/og-image.png'],
+    images: ['https://enalmarzuki.com/og-image.png'],
   },
 };
 

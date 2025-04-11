@@ -4,55 +4,9 @@ import { Inter, Itim, Roboto_Mono } from 'next/font/google';
 import cx from 'classnames';
 import { inter, itim, robotoMono } from '@/utils/fonts';
 import Head from 'next/head';
+import { metadata } from './metadata';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://enalmarzuki.com'),
-  title: 'Enal Marzuki – Frontend Developer',
-  description:
-    'Personal portfolio of Enal Marzuki, a passionate frontend developer based in Indonesia. Built with Next.js and Tailwind CSS.',
-  authors: [{ name: 'Enal Marzuki' }],
-  verification: {
-    google: 'xtUmJRx8Eqp6mC5TA6E_GbqTP6xy7fSmTqyefgvks_g',
-  },
-  robots: 'index, follow',
-  keywords: [
-    'enal marzuki',
-    'frontend developer',
-    'portfolio',
-    'react developer',
-  ],
-  alternates: {
-    canonical: '/',
-  },
-  icons: {
-    icon: '/ic-em.ico',
-    shortcut: '/ic-em.ico',
-    apple: '/ic-em.ico',
-  },
-  openGraph: {
-    title: 'Enal Marzuki – Frontend Developer',
-    description:
-      'Personal portfolio of Enal Marzuki, built with Next.js and Tailwind CSS.',
-    url: 'https://enalmarzuki.com',
-    siteName: 'Enal Marzuki',
-    images: [
-      {
-        url: 'https://enalmarzuki.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Enal Marzuki Portfolio',
-      },
-    ],
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'EnalMarzuki.',
-    description:
-      'Website personal portfolio Enal Marzuki created by Next.js + TypeScript',
-    images: ['https://enalmarzuki.com/og-image.png'],
-  },
-};
+export { metadata };
 
 export default function RootLayout({
   children,

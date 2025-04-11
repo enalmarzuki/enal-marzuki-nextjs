@@ -6,6 +6,7 @@ import { inter, itim, robotoMono } from '@/utils/fonts';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://enalmarzuki.com'),
   title: 'Enal Marzuki – Frontend Developer',
   description:
     'Personal portfolio of Enal Marzuki, a passionate frontend developer based in Indonesia. Built with Next.js and Tailwind CSS.',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     'react developer',
   ],
   alternates: {
-    canonical: 'https://enalmarzuki.com',
+    canonical: '/',
   },
   icons: {
     icon: '/ic-em.ico',

@@ -1,7 +1,5 @@
-import IcDownload from '@/assets/icons/ic-download';
 import BackgroundBlob from '@/components/BackgroundBlob';
 import { motion } from 'motion/react';
-import React from 'react';
 import ButtonCTA from './components/ButtonCTA';
 
 const HeroSection = () => {

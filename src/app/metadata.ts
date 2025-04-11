@@ -24,11 +24,6 @@ export const metadata: Metadata = {
       { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/icons/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      {
-        url: '/icons/110e7d4fc57d71660b08230e1bdbbd18.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
     ],
     shortcut: [
       { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },

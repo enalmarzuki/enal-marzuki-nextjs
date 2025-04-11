@@ -6,6 +6,7 @@ This is my personal portfolio website built with [Next.js](https://nextjs.org), 
 It showcases my work, skills, and background as a Frontend Developer with over 3 years of experience building modern web applications.
 
 ## 🚀 Tech Stack
+
 - Framework: [Next.js](https://nextjs.org)
 - Language: [TypeScript](https://www.typescriptlang.org/)
 - Styling: [Tailwind CSS](https://v3.tailwindcss.com/)

@@ -18,9 +18,9 @@ const HeroSection = () => {
           <p className='mb-1 text-left font-roboto text-xs md:mb-2.5 md:text-center md:text-sm'>
             Hi 👋, my name is
           </p>
-          <p className='text-3xl font-semibold md:mb-2.5 md:text-center md:text-5xl'>
+          <h1 className='text-3xl font-semibold md:mb-2.5 md:text-center md:text-5xl'>
             Marzuki R.
-          </p>
+          </h1>
           <p className='mb-2.5 text-3xl font-semibold md:mb-4 md:text-center md:text-5xl'>
             I’m a Frontend Developer
           </p>

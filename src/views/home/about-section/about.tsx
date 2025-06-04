@@ -13,7 +13,7 @@ const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ once: true, margin: '-50px' }}
-        className='col-span-12 md:col-span-6 lg:md:col-span-7'
+        className='col-span-12 lg:md:col-span-7'
       >
         <div className='flex flex-col gap-2.5'>
           <SectionTitle>About Me</SectionTitle>
@@ -45,11 +45,11 @@ const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ margin: '-50px' }}
-        className='order-first col-span-12 mb-4 md:order-last md:col-span-5 md:col-start-8 md:mb-0 lg:col-start-9'
+        className='order-first col-span-12 mb-4 md:mb-0 lg:order-last lg:col-span-5 lg:col-start-9'
       >
-        <div className='flex'>
-          <div className='flex h-[418px] w-full items-center justify-center bg-white/5 md:w-[320px]'>
-            <p className='text-white/40'>Under Construction !</p>
+        <div className='flex justify-center'>
+          <div className='relative flex h-[418px] w-fit items-center justify-center overflow-hidden rounded-lg'>
+            <img src='/me.JPG' alt='enal.jpg' className='h-full flex-none' />
           </div>
         </div>
       </motion.div>

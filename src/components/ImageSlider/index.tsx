@@ -1,3 +1,4 @@
+'use client';
 import IcArrow from '@/assets/icons/ic-arrow';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';

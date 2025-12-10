@@ -1,3 +1,4 @@
+'use client';
 import SectionTitle from '@/components/SectionTitle';
 import { SKILLS } from '@/constant';
 import { motion } from 'motion/react';
@@ -6,7 +7,7 @@ const AboutSection = () => {
   return (
     <div
       id='about'
-      className='relative mb-80 grid grid-cols-12 items-center justify-center gap-4 px-4 md:px-6 lg:px-10'
+      className='relative mb-40 grid grid-cols-12 items-center justify-center gap-4 px-4 md:px-6 lg:px-10'
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

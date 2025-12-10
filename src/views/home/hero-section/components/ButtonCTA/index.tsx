@@ -1,6 +1,5 @@
+'use client';
 import IcDownload from '@/assets/icons/ic-download';
-import { a } from 'motion/react-client';
-import React, { ButtonHTMLAttributes } from 'react';
 
 interface ButtonCTAProps {
   title: string;

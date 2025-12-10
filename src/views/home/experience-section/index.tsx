@@ -1,3 +1,4 @@
+'use client';
 import Tabs from '@/components/Tabs';
 import { COMPANY, EXPERIENCES } from '@/constant';
 import { useCallback, useState } from 'react';
@@ -20,7 +21,7 @@ const ExperienceSection = () => {
   return (
     <motion.div
       id='experience'
-      className='mx-auto mb-40 grid grid-cols-12 md:px-6 lg:w-10/12 lg:px-0 xl:w-[1200px]'
+      className='mx-auto mb-40 grid grid-cols-12 pt-40 md:px-6 lg:w-10/12 lg:px-0 xl:w-[1200px]'
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}

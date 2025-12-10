@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 
 import IcEmail from '@/assets/icons/ic-email';
 import IcDownload from '@/assets/icons/ic-download';
@@ -11,7 +11,7 @@ import { EMAIL } from '@/constant';
 const WorkingWithMeSection = () => {
   return (
     <motion.div
-      className='mb-80 px-4 md:px-6 lg:px-10'
+      className='mb-40 px-4 md:px-6 lg:px-10'
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}

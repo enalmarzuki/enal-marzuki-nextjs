@@ -1,4 +1,5 @@
-import { ForwardRefComponent, HTMLMotionProps, motion } from 'motion/react';
+'use client';
+import { HTMLMotionProps, motion } from 'motion/react';
 import React from 'react';
 
 interface AnimatedImageProps extends HTMLMotionProps<'img'> {

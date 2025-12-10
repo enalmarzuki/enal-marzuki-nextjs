@@ -15,7 +15,7 @@ const WorkSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, margin: '-50px' }}
-      className='mb-40 px-4 md:px-6 lg:px-10'
+      className='mb-40 px-4 py-40 md:px-6 lg:px-10'
     >
       <SectionTitle>Some Things I've Built</SectionTitle>
       {WORKS.map((work, index) => (

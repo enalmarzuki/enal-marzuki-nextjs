@@ -4,3 +4,4 @@ node_modules
 .prettierignore
 .stylelintignore
 .eslintignore
+.vercel

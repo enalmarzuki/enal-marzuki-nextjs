@@ -1,8 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-interface ButtonIconWithLabel
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonIconWithLabel extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
 }

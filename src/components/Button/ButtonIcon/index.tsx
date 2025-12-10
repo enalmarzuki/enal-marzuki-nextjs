@@ -1,8 +1,7 @@
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import cx from 'classnames';
 
-interface ButtonIconProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+interface ButtonIconProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const ButtonIcon: React.FC<ButtonIconProps> = ({
   className,

@@ -1,8 +1,9 @@
 import cx from 'classnames';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 
-interface SectionTitle
-  extends PropsWithChildren<HTMLAttributes<HTMLHeadingElement>> {}
+interface SectionTitle extends PropsWithChildren<
+  HTMLAttributes<HTMLHeadingElement>
+> {}
 
 const SectionTitle: React.FC<SectionTitle> = ({ children, ...props }) => {
   return (

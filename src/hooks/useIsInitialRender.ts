@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const useIsInitialRender = () => {
   const isInitial = useRef(true);

@@ -2,6 +2,7 @@
 import SectionTitle from '@/components/SectionTitle';
 import { SKILLS } from '@/constant';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const AboutSection = () => {
   return (
@@ -50,7 +51,7 @@ const AboutSection = () => {
       >
         <div className='flex justify-center'>
           <div className='relative flex h-[418px] w-fit items-center justify-center overflow-hidden rounded-lg'>
-            <img src='/me.JPG' alt='enal.jpg' className='h-full flex-none' />
+            <Image src='/me.JPG' alt='enal.jpg' className='h-full flex-none' />
           </div>
         </div>
       </motion.div>

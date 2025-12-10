@@ -1,9 +1,7 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Inter, Itim, Roboto_Mono } from 'next/font/google';
-import cx from 'classnames';
 import { inter, itim, robotoMono } from '@/utils/fonts';
+import cx from 'classnames';
 import Head from 'next/head';
+import './globals.css';
 import { metadata } from './metadata';
 
 export { metadata };

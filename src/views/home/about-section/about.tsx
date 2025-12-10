@@ -50,8 +50,14 @@ const AboutSection = () => {
         className='order-first col-span-12 mb-4 md:mb-0 lg:order-last lg:col-span-5 lg:col-start-9'
       >
         <div className='flex justify-center'>
-          <div className='relative flex h-[418px] w-fit items-center justify-center overflow-hidden rounded-lg'>
-            <Image src='/me.JPG' alt='enal.jpg' className='h-full flex-none' />
+          <div className='relative flex h-[418px] w-[350px] items-center justify-center overflow-hidden rounded-lg'>
+            <Image
+              src='/me.JPG'
+              alt='enal.jpg'
+              fill
+              className='flex-none object-cover'
+              priority
+            />
           </div>
         </div>
       </motion.div>

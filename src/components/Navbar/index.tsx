@@ -13,7 +13,7 @@ import useIsInitialRender from '@/hooks/useIsInitialRender';
 
 interface MobileMenuProps {
   isOpen: boolean;
-  onToggle: VoidFunction;
+  onToggle: () => void;
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onToggle }) => {

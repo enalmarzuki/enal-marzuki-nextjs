@@ -3,6 +3,7 @@ import cx from 'classnames';
 import Head from 'next/head';
 import './globals.css';
 import { metadata } from './metadata';
+import React from 'react';
 
 export { metadata };
 

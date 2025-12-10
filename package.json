@@ -7,7 +7,7 @@
     "build": "next build",
     "build:local": "prettier --write . && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prepare": "husky",
     "format": "prettier --write ."
   },
@@ -19,6 +19,7 @@
     "react-dom": "19.2.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@next/eslint-plugin-next": "^16.0.8",
     "@types/node": "^20",
     "@types/react": "^19.2.7",
@@ -28,6 +29,9 @@
     "eslint": "^8",
     "eslint-config-next": "^16.0.8",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "husky": "^9.1.6",
     "i": "^0.3.7",

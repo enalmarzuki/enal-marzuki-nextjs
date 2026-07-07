@@ -1,5 +1,5 @@
-import HomeView from '@/views/home';
+import PortfolioV3Page from '@/views/portfolio-v3';
 
 export default function HomePage() {
-  return <HomeView />;
+  return <PortfolioV3Page />;
 }
